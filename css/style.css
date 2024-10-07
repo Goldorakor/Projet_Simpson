@@ -1,0 +1,163 @@
+/* je commence par calibrer ma page pour éviter tout comportement indésirable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+#container {
+    background: rgb(240, 212, 27);
+}
+
+header {
+    width: 1600px;
+    margin: auto;  /* propriété placée dans l'élément qu'on veut centrer, et non dans le contenant */ 
+}
+
+main {
+    width: 1600px;
+    margin: auto;  /* propriété placée dans l'élément qu'on veut centrer, et non dans le contenant */ 
+}
+
+h2 {  /* on transforme notre boite h2 en flexbox et du coup, on peut aligner facilement le contenu grâce aux propriétés flexbox */
+    display: flex;
+    background: rgb(14, 123, 181);
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(224, 224, 224);
+    font-size: 34px;
+    font-style: italic;
+}  /* pas d'excès de div, les balises classiques deviennent des flex box facilement ! */
+
+#image-bandeau {
+    height: 600px;
+    width: 100%;
+}
+
+#image-bandeau img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background: rgb(14, 123, 181);
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+nav a {
+    color: rgb(224, 224, 224);
+    margin: 12px;
+}
+
+main {
+    background: white;
+}
+
+h1 {
+    color: rgb(240, 212, 27);
+    font-size: 34px;
+    display: flex;
+    flex-direction: row;
+    background: rgb(251, 251, 251);
+    justify-content: left;
+    align-items: center;
+    height: 80px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-card {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.serie-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-movie img {
+    height: 220px;
+    width: 220px;
+    border: 1px solid black;
+
+}
+
+
+
+.small-card {
+    width: 30%;
+    background: rgb(14, 123, 181);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.small-card-header {
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.small-card-header img {
+    margin: auto;
+    border: 1px solid white;
+    width: 220px;
+    height: 400px;
+}
+
+.small-card-header h3 {
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+}
+
+.small-card-header h4 {
+    color: rgb(224, 224, 224);
+    font-size: 10px;
+    font-style: italic;
+}
+
+.small-card-text p {
+    color: rgb(224, 224, 224);
+    font-size: 16px;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background: rgb(8, 69, 154);
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 1600px;
+    margin: auto;
+}
+
+footer p {
+    color: rgb(224, 224, 224);
+    font-size: 22px;
+}

@@ -18,6 +18,12 @@ header {
 }
 
 
+@media screen and (max-width: 1200px) {
+    header {
+        width: 100vw;
+    }   
+}
+
 
 h2 {  /* on transforme notre boite h2 en flexbox et du coup, on peut aligner facilement le contenu grâce aux propriétés flexbox */
     display: flex;
@@ -34,6 +40,13 @@ h2 {  /* on transforme notre boite h2 en flexbox et du coup, on peut aligner fac
 #image-bandeau {
     height: 600px;
     width: 100%;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #image-bandeau {
+        width: 100vw;
+    }   
 }
 
 
@@ -54,11 +67,114 @@ nav {
 }
 
 
+@media screen and (max-width: 1200px) {
+    nav {
+        flex-direction: column;
+        background: rgb(170, 208, 213);
+        height: 400px;
+        width: 100vw;
+    }   
+}
+
+
+@media screen and (max-width: 600px) {
+    nav > a {
+        display: none;
+    }   
+}
+
+
+@media screen and (max-width: 600px) {
+    nav {
+        height: 2px;
+    }   
+}
+
 nav a {
     color: rgb(224, 224, 224);
     margin: 12px;
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 1200px) {
+    nav a {
+        color: rgb(21, 90, 217);
+        margin: 30px;
+        font-weight: bold;
+    }   
+}
+
+
+.sandwich {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .sandwich {
+        display: block;
+    }   
+}
+
+
+
+.hamburger {
+    position: fixed;
+    /* a large z-index puts the ham button above the rest of the page*/
+    z-index: 99;
+    background: rgb(143, 194, 206);
+    border: 3px solid rgb(215, 20, 20);
+    cursor: pointer;
+    top: 3rem;
+    left: 1px;
+    font-size: 2rem;
+}
+
+
+.menu {
+    position: fixed;
+    /* give the menu a larger z-index than the ham link
+    to put the menu above it */
+    z-index: 100;
+    top: 5px;
+    left: 5px;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    height: 65vh;
+    /* basic menu styling*/
+    list-style: none;
+    background: rgb(9, 200, 230);
+    display: flex;
+    flex-direction: column;
+    /* animate slide up/down */
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+}
+
+
+.smart-menu {
+    padding: 30px;
+}
+
+
+.menu:target {
+    /* show menu */
+    transform: translateY(0);
+}
+
+
+.close {
+    position: absolute;
+    border: none;
+    color: rgb(203, 13, 13);
+    cursor: pointer;
+    top: 0.1rem;
+    right: 0.1rem;
+    font-size: 2rem;
+}
+
 
 
 main {
@@ -68,6 +184,15 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    main {
+        width: 100vw;
+        flex-direction: column;
+    }   
 }
 
 
@@ -89,12 +214,28 @@ article {
     margin: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+    article {
+        width: 100vw;
+        flex-direction: column;
+        margin: 0;
+    }   
+}
+
 
 article p {
     width: 100%;
-    margin-bottom: 20px;
+    padding: 20px;
     font-size: 22px;
     text-align: justify;
+}
+
+
+@media screen and (max-width: 1200px) {
+    p {
+        width: 100%;
+        margin: 0;
+    }   
 }
 
 
@@ -106,6 +247,14 @@ article p {
     align-items: center;
     gap: 15px;
    
+}
+
+
+@media screen and (max-width: 1200px) {
+    .serie-image {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }   
 }
 
 
@@ -124,6 +273,13 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    aside {
+        width: 100vw;
+        margin: 0;
+    }   
 }
 
 
@@ -151,8 +307,9 @@ aside p {
     color: rgb(224, 224, 224);
     font-size: 22px;
     text-align: justify;
-    margin: 25px 15px 25px 15px;
+    padding: 20px;
 }
+
 
 
 footer {
@@ -167,7 +324,19 @@ footer {
 }
 
 
+@media screen and (max-width: 1200px) {
+    footer {
+        width: 100vw;
+        text-align: center;   /* pourquoi suis-je obligé de mettre ça pour bien centrer ? */
+    }   
+}
+
+
 footer p {
     color: rgb(224, 224, 224);
     font-size: 22px;
 }
+
+
+
+
